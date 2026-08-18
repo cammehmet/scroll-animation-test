@@ -632,12 +632,49 @@ html, body {
 }
 
 @media (max-width: 768px) {
+  .navbar {
+    padding: 1rem 1.25rem;
+    flex-direction: row;
+    gap: 1rem;
+  }
+  .logo {
+    font-size: 1.3rem;
+    letter-spacing: 0.2em;
+  }
+  .nav-links {
+    gap: 1rem;
+  }
+  .nav-links a:not(.cta-nav) {
+    display: none;
+  }
+  .nav-links .cta-nav {
+    padding: 0.5rem 0.75rem;
+  }
+
   .scroll-text-overlay {
     max-width: 90%;
     left: 5% !important;
     right: 5% !important;
     text-align: center !important;
+    transform: translateY(30px) !important;
   }
+  .scroll-text-overlay.active {
+    transform: translateY(0) !important;
+  }
+
+  /* Keep intro and master overlays centered and wide on mobile */
+  #intro-overlay, #overlay-4 {
+    left: 50% !important;
+    right: auto !important;
+    transform: translate(-50%, -40%) !important;
+    width: 88vw !important;
+    max-width: 500px !important;
+    padding: 2rem 1.5rem !important;
+  }
+  #intro-overlay.active, #overlay-4.active {
+    transform: translate(-50%, -50%) !important;
+  }
+
   #overlay-1, #overlay-2, #overlay-3 {
     top: 25% !important;
   }
